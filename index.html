@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-
     <header>
         <h1>Banco de sangue - Cajazeiras-PB</h1>
         <nav>
@@ -22,6 +21,9 @@
         <section class="cadastro">
             <h2>🆘 Solicitação de Sangue</h2>
             <form id="solicitacao-form">
+            <label for="nomeSolicitante">Nome do Solicitante:</label>
+            <input type="text" id="nomeSolicitante" required>
+
             <label for="tipoNecessario">Tipo Sanguíneo Necessário:</label>
             <select id="tipoNecessario">
                 <option>A+</option>
@@ -34,14 +36,14 @@
                 <option>O-</option>
             </select>
             <label for="quantidade">Quantidade (bolsas):</label>
-            <input type="number" id="quantidade" required>
+            <input type="number" id="quantidade" required min=1>
             <button type="submit">Solicitar Bolsa de Sangue</button>
         </form>
         </section>
 
         <section class="cadastro">
             <h2>Cadastro de Doadores</h2>
-            <form>
+            <form id="cadastro-doador-form">
                 <label for="nome">Nome Completo:</label>
                 <input type="text" id="nome" required>
 
@@ -111,5 +113,6 @@
     <footer>
         <p>Banco de Sangue, Cajazeiras - PB | Salve Vidas</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
